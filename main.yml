@@ -1,7 +1,8 @@
+---
 - hosts: all
-  become: true
-  become_user: ansible
-  gather_facts: false
+  become: True
   tasks:
-    - name: copy war file
-      copy: src=target/*.war dest=/opt/apache-tomcat-9.0.76/webapps
+    - name: Deploy war to tomcat
+      copy:
+        src: /var/lib/jenkins/workspace/CICD-1/target/hiring.war
+        dest: /opt/apache-tomcat-9.0.76/webapps
