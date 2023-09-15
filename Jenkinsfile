@@ -1,4 +1,4 @@
-#Declarative
+
 pipeline {
     agent any
 
