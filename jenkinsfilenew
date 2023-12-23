@@ -1,9 +1,6 @@
 pipeline{
     agent any
-    tools{
-        maven 'maven-3.9'
-    }
-    stages{
+        stages{
         stage('checkout the code'){
             steps{
                 git url:'https://github.com/saigittest/chinna-app.git', branch: 'main'
